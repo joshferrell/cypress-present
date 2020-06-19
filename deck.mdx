@@ -1,0 +1,179 @@
+import { Box, Grid } from "theme-ui";
+import { future, highlight } from "@mdx-deck/themes";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { Tweet } from 'react-twitter-widgets';
+import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+import ThemeProvider, { LumosLight } from "@loanpal/lumos__theme";
+import { Heading, Button } from "@loanpal/lumos__core";
+
+import testTrophy from "./images/test-trophy.jpg";
+
+export { theme } from "./theme";
+
+<Box>
+  <Heading variant="h1">Cypress</Heading>
+  <p>The one things test shouldn't test, is your patience</p>
+</Box>
+
+---
+
+# What should I test?
+
+<Box
+  as="img"
+  src={testTrophy}
+  alt="End to end, integration, unit, and static tests"
+  height={800}
+/>
+
+<Notes>
+
+## Static tests
+Implement using eslint and typescript.
+
+### Eslint
+Eslint is useful for checking if a variable is unused or not imported, it can also
+sometimes used for security vunerability detection
+
+(target=_blank example)
+
+### Typescript
+Airbnb discovered that roughly 35% of all production errors could be prevented with typescript.
+Useful for upgrading packages and detecting breaking changes
+
+## Unit tests
+Really useful for testing complex methods that maybe need some documenting, good for packages
+or shared methods.
+
+## Integration test
+Today's focus, for frontend. Tests interaction and how the components work together. Stubs frontend
+server responses
+
+## End to end test
+Does not stub the server response
+
+</Notes>
+
+---
+
+<Tweet tweetId="1148986961207730176" />
+
+<Notes>
+
+## Test business case not code.
+Umbrella opens, code works, but the business case for
+and umbrella is that it shields the user from rain/sun.
+
+## Common tests when focus is code coverage
+</Notes>
+
+---
+
+# What is Cypress
+
+## 🎉🎉 DEMO TIME!! 🎉🎉
+
+<Notes>
+
+- Show the loan works test going through the login screens
+- Show the circle ci configuration and dashboard
+- Show the video output
+- Show how you're selecting the loanworks form
+- Show commands
+- Show skip login
+- Show stubs
+
+</Notes>
+
+---
+
+# No stubbing - Benefits
+
+<Steps>
+
+### Guaranteed to work in production
+
+### Test coverage around server endpoints
+
+</Steps>
+
+---
+
+# No stubbing - downsides
+
+<Steps>
+
+### Requires seeding data
+
+### Much slower
+
+### Harder to test edge cases
+
+</Steps>
+
+---
+
+# When to use no stubbing
+
+- Use sparingly
+- Great for _critical_ paths
+- Helpful to have one test around the happy path of a feature
+
+---
+
+# Stubbing - Benefits
+
+<Steps>
+
+### Control of response bodies, status, and headers
+
+### Can force responses to take longer simulating network delay
+
+### No code changes to your server or client code
+
+### Fast, < 20ms response times
+
+</Steps>
+
+---
+
+# Stubbing - Downsides
+
+<Steps>
+
+### No guarantee your stubbed responses match the actual data the server sends
+
+### No guarantee the server endpoint has tests
+
+</Steps>
+
+---
+
+# When to use stubs
+
+- Use for vast majority of tests
+- Mix and match, typically have one true end-to-end test, and then stub the rest
+- Works great with GraphQL and Typescript
+
+---
+
+# Key takeaways
+
+<Steps>
+
+## Know when to stub and not to stub
+
+## Use shortcuts
+
+## Don't test remote pages
+
+## Use case coverage _not_ code coverage
+
+## Use selectors in a way that users will interact with the app
+
+</Steps>
+
+---
+
+Questions?
