@@ -8,7 +8,7 @@
 cypress/results
 
 # production
-/build
+/public
 .serverless/
 .env
 
