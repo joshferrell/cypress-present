@@ -47,11 +47,11 @@ Really useful for testing complex methods that maybe need some documenting, good
 or shared methods.
 
 ## Integration test
-Today's focus, for frontend. Tests interaction and how the components work together. Stubs frontend
+Today's focus, for frontend. Tests interaction and how the components work together. Mocks frontend
 server responses
 
 ## End to end test
-Does not stub the server response
+Does not mock the server response
 
 </Notes>
 
@@ -88,7 +88,7 @@ and umbrella is that it shields the user from rain/sun.
 
 ---
 
-# No stubbing - Benefits
+# No mocking - Benefits
 
 <Steps>
 
@@ -100,7 +100,7 @@ and umbrella is that it shields the user from rain/sun.
 
 ---
 
-# No stubbing - downsides
+# No mocking - downsides
 
 <Steps>
 
@@ -114,7 +114,7 @@ and umbrella is that it shields the user from rain/sun.
 
 ---
 
-# When to use no stubbing
+# When to use no mocking
 
 - Use sparingly
 - Great for _critical_ paths
@@ -122,7 +122,7 @@ and umbrella is that it shields the user from rain/sun.
 
 ---
 
-# Stubbing - Benefits
+# Mocking - Benefits
 
 <Steps>
 
@@ -134,15 +134,17 @@ and umbrella is that it shields the user from rain/sun.
 
 ### Fast, < 20ms response times
 
+### Can begin frontend development before api completed when given contract
+
 </Steps>
 
 ---
 
-# Stubbing - Downsides
+# Mocking - Downsides
 
 <Steps>
 
-### No guarantee your stubbed responses match the actual data the server sends
+### No guarantee your mocked responses match the actual data the server sends
 
 ### No guarantee the server endpoint has tests
 
@@ -150,10 +152,10 @@ and umbrella is that it shields the user from rain/sun.
 
 ---
 
-# When to use stubs
+# When to use mocks
 
 - Use for vast majority of tests
-- Mix and match, typically have one true end-to-end test, and then stub the rest
+- Mix and match, typically have one true end-to-end test, and then mock the rest
 - Works great with GraphQL and Typescript
 
 ---
@@ -162,7 +164,7 @@ and umbrella is that it shields the user from rain/sun.
 
 <Steps>
 
-## Know when to stub and not to stub
+## Know when to mock and not to mock
 
 ## Use shortcuts
 
